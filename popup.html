@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Activity Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="https://www.paubox.com/hubfs/What%20is%20a%20web%20tracker%20.jpg" alt="Activity Tracker Icon" class="logo">
+      <h1>Web Activity Tracker</h1>
+      <p class="subtitle">View your browsing patterns and habits</p>
+    </header>
+    
+    <main>
+      <div class="timeframe-selector">
+        <h2>View Activity By:</h2>
+        <div class="button-group">
+          <button id="daily-btn" class="time-button">
+            <span class="icon">📅</span>
+            <span class="label">Daily</span>
+            <span class="description">Today's browsing activity</span>
+          </button>
+          
+          <button id="weekly-btn" class="time-button">
+            <span class="icon">📆</span>
+            <span class="label">Weekly</span>
+            <span class="description">Last 7 days summary</span>
+          </button>
+          
+          <button id="monthly-btn" class="time-button">
+            <span class="icon">🗓️</span>
+            <span class="label">Monthly</span>
+            <span class="description">30-day overview</span>
+          </button>
+        </div>
+      </div>
+      
+      <div class="quick-stats">
+        <h3>Quick Stats</h3>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value" id="today-mins">--</div>
+            <div class="stat-label">Minutes Today</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="sites-visited">--</div>
+            <div class="stat-label">Sites Visited</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <button id="settings-btn" class="text-button">⚙️ Settings</button>
+      <button id="help-btn" class="text-button">❓ Help</button>
+    </footer>
+  </div>
+</body>
+</html>
