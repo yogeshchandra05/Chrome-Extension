@@ -1,0 +1,28 @@
+{
+    "manifest_version":1.0,
+    "name": "Website Time Tracker",
+    "version": "1.0",
+    "description": "Track the time spent on websites daily, weekly, and monthly.",
+    "permissions": [
+      "tabs",
+      "storage",
+      "activeTab",
+      "history"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "host_permissions": [
+      "http://*/*",
+      "https://*/*"
+    ]
+  }
