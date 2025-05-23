@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web Tracker - Advanced Settings</title>
+    <link rel="stylesheet" href="settings.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header-row">
+            <h1 id="settingshead">🛠️ Advanced Settings</h1>
+            <p class="subtitle">Configure your web tracking preferences</p>
+        </div>
+
+        <form id="settingsForm" aria-labelledby="settingshead">
+            <fieldset>
+                <legend> Tracking Configuration</legend>
+                <div class="form-group">
+                    <label for="trackingToggle">
+                        <span class="label-text">Enable Web Tracking</span>
+                        <span class="label-description">Activate real-time website monitoring</span>
+                    </label>
+                    <label class="switch">
+                        <input
+                            type="checkbox"
+                            id="trackingToggle"
+                            name="trackingToggle"
+                            aria-describedby="trackingToggleHelp"
+                        />
+                        <span class="slider"></span>
+                    </label>
+                    <small id="trackingToggleHelp">
+                        Turn on to start collecting browsing data and analytics
+                    </small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="trackInterval">
+                        <span class="label-text">Data Collection Interval</span>
+                        <span class="label-description">Set frequency for automatic data logging</span>
+                    </label>
+                    <div class="input-wrapper">
+                        <input
+                            type="number"
+                            id="trackInterval"
+                            name="trackInterval"
+                            min="1"
+                            max="120"
+                            value="15"
+                            aria-describedby="intervalHelp"
+                        />
+                        <span class="input-suffix">minutes</span>
+                    </div>
+                    <small id="intervalHelp" class="form-help">
+                        Recommended: 5-30 minutes for optimal performance balance
+                    </small>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend> Data Operations</legend>
+                <div class="form-group">
+                    <label for="dataExport">
+                        <span class="label-text">Export Tracking Data</span>
+                        <span class="label-description">Download your collected data as CSV</span>
+                    </label>
+                    <div class="button-group">
+                        <button
+                            type="button"
+                            id="exportBtn"
+                            aria-label="Export tracking data to file"
+                        >
+                            📊 Export Data
+                        </button>
+  
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="resetData">
+                        <span class="label-text">Reset All Data</span>
+                        <span class="label-description">Permanently delete all tracking records</span>
+                    </label>
+                    <div class="button-group">
+                        <button
+                            type="button"
+                            id="resetBtn"
+                            aria-label="Reset all tracking data"
+                        >
+                            🗑️ Clear Data
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="submit" class="save-btn" aria-label="Save current settings">
+                    💾 Save Settings
+                </button>
+            </div>
+
+            <div
+                id="statusMessage"
+                role="status"
+                aria-live="polite"
+                class="status-message"
+            ></div>
+        </form>
+
+        <nav class="navigation-links">
+            <div class="nav-section">
+                <div class="nav-buttons">
+                    <a href="help.html" class="link" aria-label="Open help page">
+                        📚 Help
+                    </a>
+                    <a href="popup.html" class="link" aria-label="Return to main menu">
+                        ⬅️ Back
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <footer class="page-footer">
+        <p>&copy; 2025 Web Tracker PBL | Version 1.1</p>
+    </footer>
+
+    <script src="settings.js"></script>
+</body>
+</html>
