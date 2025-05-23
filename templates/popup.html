@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Activity Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="https://www.paubox.com/hubfs/What%20is%20a%20web%20tracker%20.jpg" alt="Activity Tracker Icon" class="logo">
+      <h1 title="A web tracker extension monitors user activity on websites to collect data for analytics, advertising, or enhancing user experience.">Web Activity Tracker</h1>
+      <p class="subtitle">View your browsing patterns and habits</p>
+    </header>
+    
+    <main>
+      <div class="timeframe-selector">
+        <h2>View Activity By:</h2>
+        <div class="button-group">
+          <a href="daily.html">
+            <button id="daily-activity-list" class="time-button">
+              <span class="icon"><i class="fas fa-calendar-day"></i></span>
+              <span class="label">Daily</span>
+              <span class="description">Today's browsing activity</span>
+            </button>
+          </a>
+          
+          <a href="weekly.html">
+            <button id="weekly-btn" class="time-button">
+              <span class="icon"><i class="fas fa-calendar-week"></i></span>
+              <span class="label">Weekly</span>
+              <span class="description">Last 7 days summary</span>
+            </button>
+          </a>
+          
+          <a href="monthly.html">
+            <button id="monthly-btn" class="time-button">
+              <span class="icon"><i class="fas fa-calendar-alt"></i></span>
+              <span class="label">Monthly</span>
+              <span class="description">30-day overview</span>
+            </button>
+          </a>
+        </div>
+      </div>
+      
+      <div class="quick-stats">
+        <h3>Quick Stats</h3>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value" id="today-mins">--</div>
+            <div class="stat-label">Minutes Today</div>
+          </div>
+          <div class="stat-item">
+            <div id="sites-today">--</div>
+            <div class="stat-label">Sites Visited</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <a href="settings.html">
+        <button id="settings-btn" class="text-button">
+          <i class="fas fa-cog"></i> Settings
+        </button>
+      </a>
+      <a href="help.html">
+        <button id="help-btn" class="text-button">
+          <i class="fas fa-question-circle"></i> Help
+        </button>
+      </a>
+    </footer>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
